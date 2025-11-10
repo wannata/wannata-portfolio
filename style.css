@@ -1,0 +1,211 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  background: #007bff;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header button {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.destaque {
+  color: #ffc107;
+}
+
+.btn-primario {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* SEÇÕES */
+.sobre, .projetos, .contato {
+  padding: 60px 0;
+}
+
+.sobre { background: #fff; }
+.projetos { background: #f1f3f5; }
+.contato { background: #e9ecef; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #007bff;
+}
+
+/* HABILIDADES - FLEXBOX */
+.habilidades {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* PROJETOS - GRID */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.projeto-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.projeto-card:hover {
+  transform: scale(1.05);
+}
+
+/* FORMULÁRIO */
+.contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato input, .contato textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contato textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* FOOTER */
+footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+#contador {
+  margin-top: 10px;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+/* MODO ESCURO */
+body.escuro {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.escuro .header { background: #1e40af; }
+body.escuro .sobre { background: #1e1e1e; }
+body.escuro .projetos { background: #252525; }
+body.escuro .contato { background: #2c2c2c; }
+body.escuro .card, body.escuro .projeto-card { background: #2c2c2c; }
+body.escuro .contato input, body.escuro .contato textarea {
+  background: #3a3a3a;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.8rem; }
+}
